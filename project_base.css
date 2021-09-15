@@ -211,8 +211,9 @@ article:nth-child(2) {
       height: max-content;
 }
 .pic img {
+      display: block;
       width: 100%;
-      /* height: auto; */
+      height: auto;
       border-radius: 15px;
 }
 .overlay-pic {
