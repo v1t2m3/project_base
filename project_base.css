@@ -426,7 +426,7 @@ footer {
             grid-template-columns: unset;
             grid-template-rows: unset;
             grid-auto-flow: column;
-            grid-auto-columns: 70%;
+            grid-auto-columns: 85%;
             justify-content: start;
             overflow-x: auto;
             overflow-y: hidden;
