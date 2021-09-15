@@ -204,7 +204,6 @@ article:nth-child(2) {
 .pic-descrip {
       position: relative;
       width: 100%;
-      height: max-content;
 }
 .pic {
       position: relative;
@@ -213,7 +212,7 @@ article:nth-child(2) {
 }
 .pic img {
       width: 100%;
-      height: auto;
+      /* height: auto; */
       border-radius: 15px;
 }
 .overlay-pic {
@@ -414,6 +413,11 @@ footer {
             column-gap: 30px;
             width: 95%;
             overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+      }
+      .description {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
       }
       .left-content::-webkit-scrollbar {
             width: 0px;
@@ -436,5 +440,9 @@ footer {
       .slide-descrip div {
             font-size: 22px;
             font-weight: 30;
+      }
+      .grid-client {
+            grid-template-columns: 95%;
+            row-gap: 40px;
       }
 }
