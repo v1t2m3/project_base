@@ -192,7 +192,6 @@ article:nth-child(2) {
 .gird-pic {
       padding: 40px 0px;
       display: grid;
-      justify-items: center;
       justify-content: center;
       width: 100%;
       height: max-content;
@@ -417,19 +416,20 @@ footer {
             scroll-snap-type: x mandatory;
       }
       .description {
-            scroll-snap-align: start;
+            scroll-snap-align: center;
             scroll-snap-stop: always;
       }
       .left-content::-webkit-scrollbar {
             width: 0px;
       }
-      .description {
-            min-width: 500px;
-      }
       .gird-pic {
-            grid-template-columns: 500px 500px 500px 500px;
+            grid-template-columns: unset;
+            grid-template-rows: unset;
+            grid-auto-flow: column;
+            grid-auto-columns: 70%;
+            justify-content: start;
+            overflow-x: auto;
             overflow-y: hidden;
-            overflow-x: scroll;
             scroll-snap-type: x mandatory;
       }
       .gird-pic::-webkit-scrollbar {
@@ -454,5 +454,47 @@ footer {
       .grid-client {
             grid-template-columns: 95%;
             row-gap: 40px;
+      }
+      .grid-shopinfo {
+            grid-template-columns: 60%;
+            row-gap: 30px;
+      }
+      .shop-info:nth-child(2) {
+            align-items: flex-start;
+      }
+      .contact-shop {
+            flex-direction: row;
+      }
+}
+@media only screen and (max-width: 420px) {
+      .logo-shop,
+      .menu-slide {
+            margin: 20px 10px;
+      }
+      .description {
+            min-width: 250px;
+            height: 400px;
+      }
+      .name-shop {
+            margin-top: 200px;
+            font-size: 50px;
+            font-weight: 400;
+      }
+      .btn-item {
+            width: 120px;
+      }
+      .title > div {
+            font-size: 35px;
+      }
+      .gird-pic {
+            grid-auto-columns: 80%;
+      }
+      .slide-descrip p {
+            font-size: 16px;
+            font-weight: 100;
+      }
+      .slide-descrip div {
+            font-size: 20px;
+            font-weight: 300;
       }
 }
