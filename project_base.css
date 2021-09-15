@@ -427,7 +427,16 @@ footer {
       }
       .gird-pic {
             grid-template-columns: 500px 500px 500px 500px;
+            overflow-y: hidden;
             overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+      }
+      .gird-pic::-webkit-scrollbar {
+            width: 0px;
+      }
+      .pic-descrip {
+            scroll-snap-align: center;
+            scroll-snap-stop: always;
       }
       .slide-descrip hr {
             border-bottom: 1px solid white;
